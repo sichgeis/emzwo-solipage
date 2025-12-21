@@ -281,8 +281,8 @@ p {
 }
 
 .callout {
-  border: 1px solid rgba(255, 235, 59, 0.28);
-  background: rgba(255, 235, 59, 0.08);
+  border: 1px solid rgba(127, 189, 90, 0.28);
+  background: rgba(127, 189, 90, 0.08);
   border-radius: var(--radius);
   padding: 14px 16px;
   margin-top: 12px;
