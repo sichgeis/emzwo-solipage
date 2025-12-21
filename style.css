@@ -359,6 +359,20 @@ p {
   color: rgba(255, 235, 59, 0.9);
 }
 
+.warningBox {
+  margin: 12px 0 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 2px solid rgba(255, 235, 59, 0.65);
+  background: rgba(255, 235, 59, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.warningBox strong {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
 footer {
   padding: 24px 0 34px;
   color: rgba(255, 255, 255, 0.62);
