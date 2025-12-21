@@ -373,6 +373,37 @@ p {
   line-height: 1.45;
 }
 
+.contactFab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 235, 59, 0.55);
+  background: rgba(255, 235, 59, 0.92);
+  color: rgba(40, 18, 52, 0.98);
+  font-weight: 800;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.contactFab:hover,
+.contactFab:focus-visible {
+  background: rgba(255, 235, 59, 1);
+  border-color: rgba(255, 235, 59, 0.8);
+  color: rgba(40, 18, 52, 1);
+}
+
+@media (max-width: 920px) {
+  .contactFab {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
 footer {
   padding: 24px 0 34px;
   color: rgba(255, 255, 255, 0.62);
