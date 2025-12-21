@@ -45,6 +45,18 @@ a:focus-visible {
   color: var(--accent-2);
 }
 
+main a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 235, 59, 0.45);
+}
+
+main a:hover,
+main a:focus-visible {
+  text-decoration-color: rgba(255, 235, 59, 0.9);
+}
+
 .container {
   max-width: var(--max);
   margin: 0 auto;
@@ -220,7 +232,7 @@ h1::after {
   margin: 18px 0 0;
   padding: 16px;
   border-radius: var(--radius);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(127, 189, 90, 0.28);
   background: var(--surface);
   display: grid;
   gap: 10px;
@@ -229,7 +241,7 @@ h1::after {
 .facts > div {
   padding: 10px 10px;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 235, 59, 0.18);
   background: rgba(255, 255, 255, 0.03);
 }
 
@@ -240,7 +252,7 @@ h1::after {
 
 .facts dt {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 235, 59, 0.92);
   font-weight: 650;
 }
 
@@ -253,14 +265,14 @@ h1::after {
 .section {
   margin-top: 26px;
   padding-top: 22px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 h2 {
   margin: 0 0 10px;
   font-size: 20px;
   letter-spacing: -0.01em;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 235, 59, 0.92);
 }
 
 p {
@@ -318,8 +330,8 @@ p {
   font-weight: 800;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.92);
-  background: rgba(255, 235, 59, 0.14);
-  border: 1px solid rgba(255, 235, 59, 0.42);
+  background: rgba(127, 189, 90, 0.2);
+  border: 1px solid rgba(127, 189, 90, 0.55);
 }
 
 .steps strong {
@@ -341,6 +353,10 @@ p {
   color: rgba(255, 255, 255, 0.78);
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.signature {
+  color: rgba(255, 235, 59, 0.9);
 }
 
 footer {
