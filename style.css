@@ -1,12 +1,12 @@
 :root {
-  --bg: #0b1210;
+  --bg: #5f2977;
   --surface: rgba(255, 255, 255, 0.06);
   --surface-2: rgba(255, 255, 255, 0.08);
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.72);
   --line: rgba(255, 255, 255, 0.12);
-  --accent: #67d09b;
-  --accent-2: #9be3c2;
+  --accent: #7fbd5a;
+  --accent-2: #ffeb3b;
   --shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
   --radius: 18px;
   --radius-sm: 12px;
@@ -27,28 +27,19 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
-  background: radial-gradient(
-      1200px 600px at 15% 12%,
-      rgba(103, 208, 155, 0.22),
-      transparent 58%
-    ),
-    radial-gradient(
-      900px 520px at 85% 18%,
-      rgba(155, 227, 194, 0.14),
-      transparent 62%
-    ),
-    radial-gradient(
-      1000px 700px at 50% 100%,
-      rgba(103, 208, 155, 0.12),
-      transparent 70%
-    ),
-    linear-gradient(180deg, #0a1410, #07110d 60%, #060f0b);
+  background: var(--bg);
   line-height: 1.55;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-2);
+  outline: none;
 }
 
 .container {
@@ -78,7 +69,7 @@ header {
   top: 0;
   z-index: 30;
   backdrop-filter: blur(10px);
-  background: rgba(7, 16, 12, 0.68);
+  background: rgba(59, 22, 77, 0.68);
   border-bottom: 1px solid var(--line);
 }
 
@@ -104,8 +95,12 @@ header {
   gap: 8px;
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 235, 59, 0.28);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 235, 59, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
   font-size: 12px;
   color: var(--muted);
   white-space: nowrap;
@@ -116,7 +111,7 @@ header {
   height: 8px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(103, 208, 155, 0.16);
+  box-shadow: 0 0 0 6px rgba(127, 189, 90, 0.16);
 }
 
 nav ul {
@@ -137,8 +132,8 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-  background: rgba(255, 255, 255, 0.07);
-  color: var(--text);
+  background: rgba(255, 235, 59, 0.12);
+  color: var(--accent-2);
   outline: none;
 }
 
@@ -170,9 +165,9 @@ nav a:focus-visible {
   gap: 10px;
   padding: 7px 12px;
   border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--muted);
+  border: 1px solid rgba(127, 189, 90, 0.32);
+  background: rgba(127, 189, 90, 0.1);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 13px;
 }
 
@@ -181,6 +176,16 @@ h1 {
   font-size: clamp(30px, 4.2vw, 46px);
   line-height: 1.12;
   letter-spacing: -0.02em;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0.9;
 }
 
 .lead {
@@ -213,16 +218,17 @@ h1 {
 
 .btn:hover,
 .btn:focus-visible {
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 235, 59, 0.1);
+  border-color: rgba(255, 235, 59, 0.28);
   outline: none;
 }
 
 .btnPrimary {
-  border-color: rgba(103, 208, 155, 0.55);
+  border-color: rgba(127, 189, 90, 0.55);
   background: linear-gradient(
     180deg,
-    rgba(103, 208, 155, 0.22),
-    rgba(103, 208, 155, 0.08)
+    rgba(127, 189, 90, 0.22),
+    rgba(127, 189, 90, 0.08)
   );
 }
 
@@ -230,9 +236,10 @@ h1 {
 .btnPrimary:focus-visible {
   background: linear-gradient(
     180deg,
-    rgba(103, 208, 155, 0.28),
-    rgba(103, 208, 155, 0.12)
+    rgba(127, 189, 90, 0.28),
+    rgba(127, 189, 90, 0.12)
   );
+  border-color: rgba(255, 235, 59, 0.38);
 }
 
 .heroSide {
@@ -253,6 +260,22 @@ h1 {
   display: block;
   font-size: 14px;
   margin-bottom: 2px;
+}
+
+.stat strong {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.stat strong::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 3px;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(127, 189, 90, 0.14);
+  vertical-align: -1px;
 }
 
 .stat span {
@@ -277,6 +300,7 @@ h2 {
   margin: 0 0 10px;
   font-size: 20px;
   letter-spacing: -0.01em;
+  color: rgba(255, 235, 59, 0.92);
 }
 
 p {
@@ -292,10 +316,10 @@ p {
 }
 
 .callout {
-  border: 1px solid rgba(103, 208, 155, 0.28);
+  border: 1px solid rgba(255, 235, 59, 0.28);
   background: linear-gradient(
     180deg,
-    rgba(103, 208, 155, 0.12),
+    rgba(255, 235, 59, 0.12),
     rgba(255, 255, 255, 0.04)
   );
   border-radius: var(--radius);
@@ -335,8 +359,8 @@ p {
   display: grid;
   place-items: center;
   font-weight: 800;
-  background: rgba(103, 208, 155, 0.14);
-  border: 1px solid rgba(103, 208, 155, 0.35);
+  background: rgba(255, 235, 59, 0.16);
+  border: 1px solid rgba(255, 235, 59, 0.42);
   color: var(--text);
 }
 
@@ -393,10 +417,18 @@ footer {
   gap: 10px;
   padding: 10px 12px;
   border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(127, 189, 90, 0.35);
+  background: rgba(127, 189, 90, 0.08);
   color: rgba(255, 255, 255, 0.8);
   font-size: 13px;
+}
+
+.pill:hover,
+.pill:focus-visible {
+  background: rgba(255, 235, 59, 0.14);
+  border-color: rgba(255, 235, 59, 0.42);
+  color: rgba(255, 235, 59, 0.95);
+  outline: none;
 }
 
 @media (max-width: 920px) {
