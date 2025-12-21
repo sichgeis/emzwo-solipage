@@ -1,16 +1,15 @@
 :root {
   --bg: #5f2977;
   --surface: rgba(255, 255, 255, 0.06);
-  --surface-2: rgba(255, 255, 255, 0.08);
   --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.72);
+  --muted: rgba(255, 255, 255, 0.68);
   --line: rgba(255, 255, 255, 0.12);
   --accent: #7fbd5a;
   --accent-2: #ffeb3b;
   --shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
-  --radius: 18px;
+  --radius: 16px;
   --radius-sm: 12px;
-  --max: 1120px;
+  --max: 960px;
 }
 
 * {
@@ -36,10 +35,14 @@ a {
   text-decoration: none;
 }
 
+:focus-visible {
+  outline: 2px solid rgba(255, 235, 59, 0.55);
+  outline-offset: 3px;
+}
+
 a:hover,
 a:focus-visible {
   color: var(--accent-2);
-  outline: none;
 }
 
 .container {
@@ -68,7 +71,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 30;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   background: rgba(59, 22, 77, 0.68);
   border-bottom: 1px solid var(--line);
 }
@@ -82,10 +85,10 @@ header {
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 700;
+  font-weight: 720;
   letter-spacing: 0.2px;
 }
 
@@ -95,12 +98,8 @@ header {
   gap: 8px;
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 235, 59, 0.28);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 235, 59, 0.12),
-    rgba(255, 255, 255, 0.04)
-  );
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
   font-size: 12px;
   color: var(--muted);
   white-space: nowrap;
@@ -114,49 +113,33 @@ header {
   box-shadow: 0 0 0 6px rgba(127, 189, 90, 0.16);
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.navLinks {
   display: flex;
-  gap: 14px;
+  gap: 6px;
   align-items: center;
 }
 
-nav a {
+.navLinks a {
   color: var(--muted);
   font-size: 14px;
   padding: 8px 10px;
-  border-radius: 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
 }
 
-nav a:hover,
-nav a:focus-visible {
-  background: rgba(255, 235, 59, 0.12);
+.navLinks a:hover,
+.navLinks a:focus-visible {
   color: var(--accent-2);
-  outline: none;
+  border-color: rgba(255, 235, 59, 0.32);
+  background: rgba(255, 235, 59, 0.08);
 }
 
-.hero {
-  padding: 56px 0 26px;
+main {
+  padding: 28px 0 56px;
 }
 
-.heroGrid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 22px;
-  align-items: stretch;
-}
-
-.card {
-  border: 1px solid var(--line);
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.heroMain {
-  padding: 28px 26px;
+.intro {
+  padding: 42px 0 22px;
 }
 
 .kicker {
@@ -167,7 +150,7 @@ nav a:focus-visible {
   border-radius: 999px;
   border: 1px solid rgba(127, 189, 90, 0.32);
   background: rgba(127, 189, 90, 0.1);
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 13px;
 }
 
@@ -208,9 +191,9 @@ h1::after {
   justify-content: center;
   gap: 10px;
   padding: 12px 14px;
-  border-radius: 14px;
+  border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   font-weight: 650;
   font-size: 14px;
@@ -218,89 +201,66 @@ h1::after {
 
 .btn:hover,
 .btn:focus-visible {
-  background: rgba(255, 235, 59, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 235, 59, 0.28);
-  outline: none;
 }
 
 .btnPrimary {
   border-color: rgba(127, 189, 90, 0.55);
-  background: linear-gradient(
-    180deg,
-    rgba(127, 189, 90, 0.22),
-    rgba(127, 189, 90, 0.08)
-  );
+  background: rgba(127, 189, 90, 0.1);
 }
 
 .btnPrimary:hover,
 .btnPrimary:focus-visible {
-  background: linear-gradient(
-    180deg,
-    rgba(127, 189, 90, 0.28),
-    rgba(127, 189, 90, 0.12)
-  );
-  border-color: rgba(255, 235, 59, 0.38);
+  background: rgba(255, 235, 59, 0.14);
+  border-color: rgba(255, 235, 59, 0.42);
 }
 
-.heroSide {
-  padding: 22px;
-  display: grid;
-  gap: 12px;
-  align-content: start;
-}
-
-.stat {
-  padding: 14px 14px;
-  border-radius: var(--radius-sm);
+.facts {
+  margin: 18px 0 0;
+  padding: 16px;
+  border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface);
+  display: grid;
+  gap: 10px;
 }
 
-.stat strong {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 2px;
+.facts > div {
+  padding: 10px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.stat strong {
-  color: rgba(255, 255, 255, 0.92);
+.facts > div {
+  display: grid;
+  gap: 2px;
 }
 
-.stat strong::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-right: 8px;
-  border-radius: 3px;
-  background: var(--accent);
-  box-shadow: 0 0 0 5px rgba(127, 189, 90, 0.14);
-  vertical-align: -1px;
-}
-
-.stat span {
-  display: block;
-  color: var(--muted);
+.facts dt {
   font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 650;
 }
 
-main {
-  padding: 8px 0 60px;
+.facts dd {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
 }
 
-section {
-  margin-top: 18px;
-}
-
-.sectionCard {
-  padding: 22px;
+.section {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
 }
 
 h2 {
   margin: 0 0 10px;
   font-size: 20px;
   letter-spacing: -0.01em;
-  color: rgba(255, 235, 59, 0.92);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 p {
@@ -308,27 +268,18 @@ p {
   color: var(--muted);
 }
 
-.grid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.callout {
+  border: 1px solid rgba(255, 235, 59, 0.28);
+  background: rgba(255, 235, 59, 0.08);
+  border-radius: var(--radius);
+  padding: 14px 16px;
   margin-top: 12px;
 }
 
-.callout {
-  border: 1px solid rgba(255, 235, 59, 0.28);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 235, 59, 0.12),
-    rgba(255, 255, 255, 0.04)
-  );
-  border-radius: var(--radius);
-  padding: 18px;
-}
-
-.callout h3 {
-  margin: 0 0 6px;
-  font-size: 16px;
+.callout strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 
 .callout p {
@@ -337,40 +288,47 @@ p {
 }
 
 .steps {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   gap: 10px;
-  margin-top: 12px;
+  counter-reset: step;
 }
 
-.step {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 12px;
-  padding: 14px;
+.steps li {
+  position: relative;
+  padding: 14px 14px 14px 52px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.num {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
   font-weight: 800;
-  background: rgba(255, 235, 59, 0.16);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 235, 59, 0.14);
   border: 1px solid rgba(255, 235, 59, 0.42);
-  color: var(--text);
 }
 
-.step strong {
+.steps strong {
   display: block;
   margin-bottom: 2px;
   font-size: 14px;
 }
 
-.step span {
+.steps span {
   display: block;
   color: var(--muted);
   font-size: 13px;
@@ -389,7 +347,7 @@ footer {
   padding: 24px 0 34px;
   color: rgba(255, 255, 255, 0.62);
   border-top: 1px solid var(--line);
-  background: rgba(0, 0, 0, 0.14);
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .footerGrid {
@@ -417,31 +375,22 @@ footer {
   gap: 10px;
   padding: 10px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(127, 189, 90, 0.35);
-  background: rgba(127, 189, 90, 0.08);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
   color: rgba(255, 255, 255, 0.8);
   font-size: 13px;
 }
 
 .pill:hover,
 .pill:focus-visible {
-  background: rgba(255, 235, 59, 0.14);
+  background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 235, 59, 0.42);
   color: rgba(255, 235, 59, 0.95);
-  outline: none;
 }
 
 @media (max-width: 920px) {
-  .heroGrid {
-    grid-template-columns: 1fr;
-  }
-
-  nav ul {
+  .navLinks {
     display: none;
-  }
-
-  .grid2 {
-    grid-template-columns: 1fr;
   }
 
   .footerGrid {

@@ -18,64 +18,56 @@
     <header>
       <div class="container">
         <div class="nav">
-          <div class="brand" aria-label="EmZwo">
+          <a class="brand" href="#inhalt" aria-label="EmZwo">
             <span class="dot" aria-hidden="true"></span>
             <span>EmZwo</span>
             <span class="badge">Mühlenstraße 2 · Haus im Viertel</span>
-          </div>
+          </a>
 
-          <nav aria-label="Hauptnavigation">
-            <ul>
-              <li><a href="#wer">Wer wir sind</a></li>
-              <li><a href="#vor">Was wir vorhaben</a></li>
-              <li><a href="#wie">Wie es funktioniert</a></li>
-              <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
+          <nav aria-label="Hauptnavigation" class="navLinks">
+            <a href="#wer">Wer wir sind</a>
+            <a href="#vor">Was wir vorhaben</a>
+            <a href="#wie">Wie es funktioniert</a>
+            <a href="#kontakt">Kontakt</a>
           </nav>
         </div>
       </div>
     </header>
 
-    <div class="hero">
-      <div class="container">
-        <div class="heroGrid">
-          <div class="card heroMain">
-            <div class="kicker">Direktkredite für sozialen Wohnraum im Maschviertel</div>
-            <h1>Wir wollen unser Zuhause erhalten – dauerhaft, sozial und selbstverwaltet.</h1>
-            <p class="lead">
-              Das grüne Haus mit Türmchen in der Mühlenstraße 2 soll verkauft werden. Gemeinsam mit
-              Unser Viertel e.V. möchten wir als EmZwo das erste „Haus im Viertel“ werden – und dafür
-              brauchen wir Menschen wie dich.
-            </p>
-
-            <div class="ctaRow">
-              <a class="btn btnPrimary" href="#kontakt">Direktkredit anbieten</a>
-              <a class="btn" href="#wie">So funktioniert’s</a>
-              <a class="btn" href="#vor">Warum wir kaufen</a>
-            </div>
-          </div>
-
-          <aside class="card heroSide" aria-label="Projekt auf einen Blick">
-            <div class="stat">
-              <strong>Worum geht’s?</strong>
-              <span>Hauskauf statt Verdrängung – Wohnraum dem Markt entziehen.</span>
-            </div>
-            <div class="stat">
-              <strong>Womit?</strong>
-              <span>Direktkredite als Eigenkapital – Voraussetzung für den Bankkredit.</span>
-            </div>
-            <div class="stat">
-              <strong>Ab wann?</strong>
-              <span>Kreditsumme ab 1.000 € · persönliche Vertragsunterzeichnung.</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </div>
-
     <main id="inhalt">
       <div class="container">
-        <section id="wer" class="card sectionCard">
+        <section class="intro">
+          <div class="kicker">Direktkredite für sozialen Wohnraum im Maschviertel</div>
+          <h1>Wir wollen unser Zuhause erhalten – dauerhaft, sozial und selbstverwaltet.</h1>
+          <p class="lead">
+            Das grüne Haus mit Türmchen in der Mühlenstraße 2 soll verkauft werden. Gemeinsam mit Unser Viertel
+            e.V. möchten wir als EmZwo das erste „Haus im Viertel“ werden – und dafür brauchen wir Menschen wie
+            dich.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="#kontakt">Direktkredit anbieten</a>
+            <a class="btn" href="#wie">So funktioniert’s</a>
+            <a class="btn" href="#vor">Warum wir kaufen</a>
+          </div>
+
+          <dl class="facts" aria-label="Projekt auf einen Blick">
+            <div>
+              <dt>Worum geht’s?</dt>
+              <dd>Hauskauf statt Verdrängung – Wohnraum dem Markt entziehen.</dd>
+            </div>
+            <div>
+              <dt>Womit?</dt>
+              <dd>Direktkredite als Eigenkapital – Voraussetzung für den Bankkredit.</dd>
+            </div>
+            <div>
+              <dt>Ab wann?</dt>
+              <dd>Kreditsumme ab 1.000 € · persönliche Vertragsunterzeichnung.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="wer" class="section">
           <h2>Wer sind wir?</h2>
           <p>
             Wir sind die Bewohner:innen der Mühlenstraße 2 – kurz EmZwo – und leben hier in einer bunten
@@ -93,28 +85,25 @@
           <p>Das wollen wir gemeinsam mit Unser Viertel e.V. verhindern!</p>
         </section>
 
-        <section id="vor" class="card sectionCard">
+        <section id="vor" class="section">
           <h2>Was haben wir vor?</h2>
-          <div class="grid2">
-            <div>
-              <p>
-                Die Idee von Unser Viertel e.V. ist es, als neu gegründete GmbH Häuser im Maschviertel zu
-                kaufen und von den jeweiligen Hausbewohner:innen selbst verwalten zu lassen. Damit entziehen
-                wir die Häuser dauerhaft dem Immobilienmarkt und schaffen nachhaltigen, sozialen Wohnraum.
-              </p>
-              <p>Wir, die EmZwo, wollen nun das erste „Haus im Viertel“ werden!</p>
-            </div>
-            <div class="callout">
-              <h3>Aktueller Stand</h3>
-              <p>
-                Die aktuellen Eigentümer haben zugestimmt, unser Kaufangebot anzunehmen. Nun muss der
-                Finanzierungsplan umgesetzt werden.
-              </p>
-            </div>
+          <p>
+            Die Idee von Unser Viertel e.V. ist es, als neu gegründete GmbH Häuser im Maschviertel zu
+            kaufen und von den jeweiligen Hausbewohner:innen selbst verwalten zu lassen. Damit entziehen
+            wir die Häuser dauerhaft dem Immobilienmarkt und schaffen nachhaltigen, sozialen Wohnraum.
+          </p>
+          <p>Wir, die EmZwo, wollen nun das erste „Haus im Viertel“ werden!</p>
+
+          <div class="callout" aria-label="Aktueller Stand">
+            <strong>Aktueller Stand</strong>
+            <p>
+              Die aktuellen Eigentümer haben zugestimmt, unser Kaufangebot anzunehmen. Nun muss der
+              Finanzierungsplan umgesetzt werden.
+            </p>
           </div>
         </section>
 
-        <section id="wie" class="card sectionCard">
+        <section id="wie" class="section">
           <h2>Wie funktioniert das?</h2>
           <p>
             Der wichtigste Punkt in unserem Finanzierungsplan sind die Direktkredite. Ohne Direktkredite kein
@@ -140,57 +129,36 @@
             gewünschten Konditionen für deinen Direktkredit festgelegt haben.
           </p>
 
-          <div class="steps" aria-label="Ablauf in drei Schritten">
-            <div class="step">
-              <div class="num">1</div>
-              <div>
-                <strong>Du kontaktierst uns</strong>
-                <span>Unverbindlich – per Mail oder über unsere Kontaktmöglichkeiten.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">2</div>
-              <div>
-                <strong>Wir schicken dir weitere Infos</strong>
-                <span>Zum Projekt, zur Finanzierung und zum Thema Direktkredit.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">3</div>
-              <div>
-                <strong>Wir vereinbaren ein Gespräch</strong>
-                <span>Wir erklären alles in Ruhe und beantworten deine Fragen.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">4</div>
-              <div>
-                <strong>Wir erstellen den Direktkreditvertrag</strong>
-                <span>Mit Betrag (ab 1.000 €), Laufzeit und Rückzahlung – transparent und verbindlich.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">5</div>
-              <div>
-                <strong>Bankkredit finalisieren</strong>
-                <span>Wenn genügend Eigenkapital über Direktkredite gesammelt ist.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">6</div>
-              <div>
-                <strong>Haus kaufen – Kredit über die Miete bedienen</strong>
-                <span>Wir kaufen das Haus und zahlen den Bankkredit aus den Mieteinnahmen.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">7</div>
-              <div>
-                <strong>Rückzahlung bei Fälligkeit</strong>
-                <span>Wenn dein Direktkredit fällig ist, zahlen wir dein Geld wie vereinbart zurück.</span>
-              </div>
-            </div>
-          </div>
+          <ol class="steps" aria-label="Ablauf">
+            <li>
+              <strong>Du kontaktierst uns</strong>
+              <span>Unverbindlich – per Mail oder über unsere Kontaktmöglichkeiten.</span>
+            </li>
+            <li>
+              <strong>Wir schicken dir weitere Infos</strong>
+              <span>Zum Projekt, zur Finanzierung und zum Thema Direktkredit.</span>
+            </li>
+            <li>
+              <strong>Wir vereinbaren ein Gespräch</strong>
+              <span>Wir erklären alles in Ruhe und beantworten deine Fragen.</span>
+            </li>
+            <li>
+              <strong>Wir erstellen den Direktkreditvertrag</strong>
+              <span>Mit Betrag (ab 1.000 €), Laufzeit und Rückzahlung – transparent und verbindlich.</span>
+            </li>
+            <li>
+              <strong>Bankkredit finalisieren</strong>
+              <span>Wenn genügend Eigenkapital über Direktkredite gesammelt ist.</span>
+            </li>
+            <li>
+              <strong>Haus kaufen – Kredit über die Miete bedienen</strong>
+              <span>Wir kaufen das Haus und zahlen den Bankkredit aus den Mieteinnahmen.</span>
+            </li>
+            <li>
+              <strong>Rückzahlung bei Fälligkeit</strong>
+              <span>Wenn dein Direktkredit fällig ist, zahlen wir dein Geld wie vereinbart zurück.</span>
+            </li>
+          </ol>
 
           <div class="signature">DEINE EMZWO</div>
         </section>
@@ -200,18 +168,14 @@
     <footer id="kontakt">
       <div class="container">
         <div class="footerGrid">
-          <div>
-            <div class="fine">
-              Über den Support dieses Projekts freuen sich Anton, Anes, Justin, Caroline, Thomas, Myrtha,
-              Levi, Aimo, Matze, Merle, Karlo, Lulu, Franz, Hilde, Lore, Klara, Mathilda und alle Menschen,
-              die sozialen Wohnraum genauso wichtig finden wie wir.
-            </div>
-            <div class="fine" style="margin-top: 10px;">
-              Du möchtest unterstützen? Schreib uns – wir melden uns mit den nächsten Schritten.
-            </div>
+          <div class="fine">
+            Über den Support dieses Projekts freuen sich Anton, Anes, Justin, Caroline, Thomas, Myrtha,
+            Levi, Aimo, Matze, Merle, Karlo, Lulu, Franz, Hilde, Lore, Klara, Mathilda und alle Menschen,
+            die sozialen Wohnraum genauso wichtig finden wie wir.
           </div>
 
           <div class="contact">
+            <p class="fine">Du möchtest unterstützen? Schreib uns – wir melden uns mit den nächsten Schritten.</p>
             <a class="pill" href="mailto:kontakt@emzwo.example">kontakt@emzwo.example</a>
             <a class="pill" href="https://example.com" target="_blank" rel="noreferrer">Mehr Infos (Link eintragen)</a>
             <span class="fine">Unser Viertel e.V. · Maschviertel</span>
