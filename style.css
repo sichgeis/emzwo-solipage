@@ -154,6 +154,59 @@ main {
   padding: 42px 0 22px;
 }
 
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-areas:
+    "main art"
+    "facts facts";
+  gap: 18px 24px;
+  align-items: center;
+}
+
+.heroMain {
+  grid-area: main;
+  min-width: 0;
+}
+
+.heroCopy {
+  min-width: 0;
+}
+
+.heroArt {
+  grid-area: art;
+  margin: 0;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(127, 189, 90, 0.25);
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 235, 59, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(127, 189, 90, 0.12),
+      transparent 52%
+    ),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  justify-self: end;
+  max-width: 420px;
+}
+
+.heroArt img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.35));
+}
+
+.heroFacts {
+  grid-area: facts;
+  margin-top: 6px;
+}
+
 .kicker {
   display: inline-flex;
   align-items: center;
@@ -188,6 +241,21 @@ h1::after {
   color: var(--muted);
   font-size: 16px;
   max-width: 60ch;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "art"
+      "main"
+      "facts";
+  }
+
+  .heroArt {
+    justify-self: start;
+    max-width: 520px;
+  }
 }
 
 .ctaRow {
