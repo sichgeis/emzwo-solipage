@@ -247,8 +247,8 @@ h1::after {
   .hero {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "art"
       "main"
+      "art"
       "facts";
   }
 
