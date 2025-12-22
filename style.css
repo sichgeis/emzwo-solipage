@@ -336,6 +336,11 @@ h1::after {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+#rechtliches.section {
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
 h2 {
   margin: 0 0 10px;
   font-size: 20px;
@@ -356,6 +361,12 @@ h2 {
 
 #rechtliches .legal p {
   color: inherit;
+  margin: 0 0 8px;
+}
+
+#rechtliches .warningBox {
+  margin: 8px 0 8px;
+  padding: 12px 14px;
 }
 
 p {
