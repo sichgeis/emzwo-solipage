@@ -410,6 +410,62 @@ p {
   color: var(--muted);
 }
 
+.fundingProgress {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  display: grid;
+  gap: 8px;
+}
+
+.fundingProgressHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fundingProgressHead strong {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.fundingProgressHead span {
+  font-size: 13px;
+  color: rgba(255, 235, 59, 0.9);
+  font-weight: 700;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    rgba(127, 189, 90, 0.95),
+    rgba(255, 235, 59, 0.95)
+  );
+}
+
+.fundingNote {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
 .steps {
   margin: 14px 0 0;
   padding: 0;
