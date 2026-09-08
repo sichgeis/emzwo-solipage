@@ -438,6 +438,10 @@ p {
   margin: 0;
 }
 
+.newsItem p + p {
+  margin-top: 10px;
+}
+
 .newsDate {
   display: inline-flex;
   margin-bottom: 8px;
