@@ -1,12 +1,14 @@
 :root {
-  --purple:#442151;
-  --purple-light:#603475;
-  --cream:#faf7ef;
-  --ink:#29232c;
-  --muted:#625b65;
-  --green:#d0eba9;
-  --yellow:#f3e45c;
-  --line:#d9d3cd;
+  --purple:#493750;
+  --purple-surface:#60496a;
+  --on-purple:#f0e8ed;
+  --purple-light:#6c5576;
+  --cream:#d2c5d3;
+  --ink:#302a33;
+  --muted:#514955;
+  --green:#c2ccb7;
+  --yellow:#dfd099;
+  --line:#b0a3b3;
   --max:1120px;
 }
 * {
@@ -74,7 +76,7 @@ h4 {
 }
 em {
   font-style:normal;
-  color:#43632c;
+  color:#3d542f;
 }
 .wrap {
   width:min(var(--max),calc(100% - 80px));
@@ -101,7 +103,7 @@ em {
   align-items:center;
   gap:24px;
   padding:9px 24px;
-  background:#eee6f0;
+  background:#c7b8c9;
   color:var(--purple);
   font-size:13px;
   line-height:1.5;
@@ -164,8 +166,8 @@ nav a {
   border-bottom:2px solid var(--purple);
 }
 .hero {
-  background:var(--purple);
-  color:var(--cream);
+  background:var(--purple-surface);
+  color:var(--on-purple);
   padding:64px 0 44px;
 }
 .hero-grid {
@@ -183,14 +185,14 @@ nav a {
   margin-bottom:20px;
 }
 .hero .eyebrow {
-  color:var(--green);
+  color:#d6dfc9;
 }
 .hero .eyebrow span {
   font-size:9px;
   margin-right:8px;
 }
 .hero em {
-  color:var(--green);
+  color:#d6dfc9;
 }
 .hero-lead {
   margin-top:25px;
@@ -227,7 +229,7 @@ nav a {
   border-radius:5px;
 }
 .button:hover {
-  background:#fff08a;
+  background:#eaddb0;
 }
 .text-link {
   font-size:15px;
@@ -336,7 +338,7 @@ figcaption {
 }
 .milestones {
   border-bottom:1px solid var(--line);
-  background:#f0efdf;
+  background:#c7c9bf;
 }
 .milestones .wrap {
   display:flex;
@@ -350,7 +352,7 @@ figcaption {
   font-weight:600;
 }
 .milestones span {
-  color:#43632c;
+  color:#3d542f;
   margin-right:7px;
 }
 .section {
@@ -411,8 +413,8 @@ figcaption {
   background:var(--purple);
 }
 .loan-section {
-  background:#eeeee2;
-  border-block:1px solid #dadbc9;
+  background:#c7c9bf;
+  border-block:1px solid #a7b09d;
 }
 .loan-facts {
   display:grid;
@@ -422,7 +424,7 @@ figcaption {
 }
 .loan-facts>div {
   padding:8px 24px;
-  border-left:1px solid #b9bfab;
+  border-left:1px solid #9ca78f;
 }
 .loan-facts>div:first-child {
   padding-left:0;
@@ -441,7 +443,7 @@ figcaption {
 }
 .risk {
   border-left:4px solid #9a662a;
-  background:#f9f3df;
+  background:#d9cfb8;
   padding:24px 28px;
   margin:36px 0;
 }
@@ -460,10 +462,10 @@ figcaption {
   font-weight:650;
 }
 .faq {
-  border-top:1px solid #bbc0b2;
+  border-top:1px solid #9ca78f;
 }
 details {
-  border-bottom:1px solid #bbc0b2;
+  border-bottom:1px solid #9ca78f;
 }
 summary {
   cursor:pointer;
@@ -506,8 +508,8 @@ details>div {
   color:var(--muted);
 }
 .contact-section {
-  background:var(--purple);
-  color:var(--cream);
+  background:var(--purple-surface);
+  color:var(--on-purple);
   padding:64px 0;
 }
 .contact-grid {
@@ -517,7 +519,7 @@ details>div {
   align-items:center;
 }
 .contact-section em {
-  color:var(--green);
+  color:#d6dfc9;
 }
 .contact-section p {
   max-width:47ch;
@@ -545,14 +547,14 @@ details>div {
   border:1px solid #baa9c2;
   border-radius:5px;
   background:transparent;
-  color:var(--cream);
+  color:var(--on-purple);
   padding:12px 16px;
   cursor:pointer;
   font-size:15px;
   min-height:50px;
 }
 .copy-button:hover {
-  background:#603475;
+  background:#6c5576;
 }
 .copy-status {
   min-height:1.6em;
@@ -584,7 +586,7 @@ details>div {
   font-size:16px;
 }
 .news-section {
-  background:#eee6f0;
+  background:#c7b8c9;
 }
 .latest-news {
   display:grid;
@@ -594,7 +596,7 @@ details>div {
 .newsDate {
   font-size:13px;
   font-weight:650;
-  color:#62516a;
+  color:#514158;
   margin-bottom:14px;
 }
 .newsItem h3 {
@@ -609,8 +611,8 @@ details>div {
 }
 .archive {
   margin-top:36px;
-  border-top:1px solid #bdb0c3;
-  border-bottom:1px solid #bdb0c3;
+  border-top:1px solid #aa98b1;
+  border-bottom:1px solid #aa98b1;
 }
 .archive>div {
   max-width:none;
@@ -622,7 +624,7 @@ details>div {
   gap:28px 48px;
 }
 .archive .newsItem {
-  border-top:1px solid #cfc2d4;
+  border-top:1px solid #aa98b1;
   padding-top:20px;
 }
 .legal-section h2 {
@@ -636,14 +638,14 @@ details>div {
   font-size:16px;
 }
 .warningBox {
-  background:#f0e9d7;
+  background:#d9cfb8;
   border-left:4px solid #9a662a;
   padding:18px 22px;
   margin:18px 0;
 }
 .site-footer {
-  background:#302035;
-  color:#f7f0fa;
+  background:#514058;
+  color:#f0e8ed;
   padding:40px 0 22px;
 }
 .footer-top {
@@ -879,7 +881,7 @@ details>div {
     gap:12px;
     padding:0 0 14px;
     border:0;
-    border-bottom:1px solid #b9bfab;
+    border-bottom:1px solid #9ca78f;
   }
   .loan-facts dt {
     font-size:13px;
@@ -926,7 +928,7 @@ details>div {
     grid-template-columns:1fr;
   }
   .latest-news .newsItem+.newsItem {
-    border-top:1px solid #bdb0c3;
+    border-top:1px solid #aa98b1;
     padding-top:28px;
   }
   .footer-top {
