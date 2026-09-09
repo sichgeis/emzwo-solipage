@@ -646,7 +646,7 @@ h1 em, h2 em {
   grid-template-columns: 1fr 1fr;
   gap: 28px 48px;
 }
-.archive .newsIth1 em, h2 em {
+.archive .newsItem {
   border-top: 1px solid var(--line);
   padding-top: 20px;
 }
@@ -947,7 +947,7 @@ h1 em, h2 em {
   .archive-list {
     grid-template-columns: 1fr;
   }
-  .latest-news .newsItem+.newsIth1 em, h2 em {
+  .latest-news .newsItem + .newsItem {
     border-top: 1px solid var(--line);
     padding-top: 28px;
   }
