@@ -12,5 +12,5 @@ Shared existing assets use relative paths. The imprint links to the existing
 page: registry and representation details still need the project's confirmation.
 No invented photography or changes to the source PDFs.
 
-Funding snapshot: 2026-09-08, EUR 320,000 of EUR 400,000 (80%). This preview is a
+Funding snapshot: 2026-09-09, EUR 300,000 of EUR 400,000 (75%). This preview is a
 separate snapshot; later homepage updates do not automatically update it.

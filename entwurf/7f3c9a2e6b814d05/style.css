@@ -341,7 +341,7 @@ h1 em, h2 em {
   display: block;
   background: var(--green);
   height: 100%;
-  width: 80%;
+  width: 75%;
   border-radius: 20px;
 }
 .funding-bottom {
